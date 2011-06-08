@@ -1,0 +1,28 @@
+﻿<Window x:Class="WATOR.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="WaTor" Height="410" Width="535" ResizeMode="NoResize">
+    <Grid Background="Black">
+        <Rectangle RadiusX="10" RadiusY="10" Stroke="Yellow" Fill="#111111" Height="359" HorizontalAlignment="Left" Margin="11,14,0,0" Name="rectangle1" VerticalAlignment="Top" Width="356" />
+        <Rectangle RadiusX="10" RadiusY="10" Stroke="Yellow" Fill="#111111" Height="359" HorizontalAlignment="Left" Margin="371,14,0,0" Name="rectangle2" VerticalAlignment="Top" Width="145" />
+        <Button Click="StartSimulation" BorderBrush="Green" Foreground="Green" Background="Black" Content="Start" Height="23" HorizontalAlignment="Left" Margin="445,342,0,0" Name="btnStart" VerticalAlignment="Top" Width="58" />
+        <Button Click="StopSimulation" BorderBrush="Green" Foreground="Green" Background="Black" Content="Stop" Height="23" HorizontalAlignment="Left" Margin="383,342,0,0" Name="btnStop" VerticalAlignment="Top" Width="58" />
+        <TextBlock Foreground="Green" Height="17" HorizontalAlignment="Left" Margin="383,26,0,0" Name="lblFieldSize" Text="Simulation field size:" VerticalAlignment="Top" Width="102" />
+        <TextBlock Foreground="Green" Height="17" HorizontalAlignment="Left" Margin="383,64,0,0" Name="lblSharksCount" Text="Sharks count:" VerticalAlignment="Top" Width="70" />
+        <TextBlock Foreground="Green" Height="17" HorizontalAlignment="Left" Margin="383,100,0,0" Name="lblSepiaCount" Text="Sepias count:" VerticalAlignment="Top" Width="70" />        
+        <Canvas Background="#111111" Width="331" Height="331" HorizontalAlignment="Left" Name="simulation" VerticalAlignment="Top" Margin="23,28,0,0"></Canvas>
+        <Slider Value="45" Minimum="7" Maximum="50" Height="23" HorizontalAlignment="Left" Margin="383,43,0,0" Name="sliderFieldSize" VerticalAlignment="Top" Width="120" />
+        <Slider ValueChanged="ChangeSharksCount" Height="23" HorizontalAlignment="Left" Margin="383,79,0,0" Name="sliderSharksCount" VerticalAlignment="Top" Width="120" Value="0" Maximum="10" />
+        <Slider ValueChanged="ChangeSepiasCount" HorizontalAlignment="Left" Margin="383,118,0,0" Name="sliderSepiasCount" Width="120" Height="23" VerticalAlignment="Top" Value="0" Maximum="10" />
+        <Slider Minimum="5" Maximum="30" Height="23" HorizontalAlignment="Left" Margin="383,198,0,0" Name="sliderSepiaLife" VerticalAlignment="Top" Width="120" />
+        <TextBlock Foreground="Green" HorizontalAlignment="Left" Margin="384,180,0,0" Name="lblSepiaLife" Text="Sepia's life:" Height="17" VerticalAlignment="Top" />
+        <Slider Minimum="5" Maximum="100" Height="23" HorizontalAlignment="Left" Margin="383,158,0,0" Name="sliderSharkLife" VerticalAlignment="Top" Width="120" />
+        <TextBlock Foreground="Green" Height="17" HorizontalAlignment="Left" Margin="383,140,0,0" Name="lblSharkLife" Text="Shark's life:" VerticalAlignment="Top" />
+        <TextBlock Foreground="Green" Height="17" HorizontalAlignment="Left" Margin="383,220,0,0" Name="lblSharksHunger" Text="Sharks' hunger rate:" VerticalAlignment="Top" />
+        <Slider Value="1.5" Minimum="1" Maximum="5"  Height="23" HorizontalAlignment="Left" Margin="383,238,0,0" Name="sliderSharksHunger" VerticalAlignment="Top" Width="120" />
+        <Slider Value="2" Minimum="1" Maximum="5" Height="23" HorizontalAlignment="Left" Margin="383,318,0,0" Name="sliderSepiasChildren" VerticalAlignment="Top" Width="120" />
+        <Slider Value="3" Minimum="1" Maximum="5" Height="23" HorizontalAlignment="Left" Margin="384,278,0,0" Name="sliderSharksChildren" VerticalAlignment="Top" Width="120" />
+        <TextBlock Foreground="Green" Height="17" HorizontalAlignment="Left" Margin="383,300,0,0" Name="lblSepiasChildren" Text="Sepia's population:" VerticalAlignment="Top" />
+        <TextBlock Height="17" Foreground="Green" HorizontalAlignment="Left" Margin="383,260,0,0" Name="lblSharksChildren" Text="Shark's population:" VerticalAlignment="Top" />
+    </Grid>
+</Window>
